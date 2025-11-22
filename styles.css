@@ -22,6 +22,7 @@ body{
     line-height: var(--base-font-line-heigt);
     font-weight: var(--base-font-weight);
 
+
 }
 
 h1, h2, h3 {
@@ -204,6 +205,89 @@ ul {
     color: white;
     padding: 10px;
     border-radius: 30px;
+}
+
+.tab-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.tab-nav  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.tab-nav li {
+    background-color: whitesmoke;
+    padding: .4rem .7rem;
+    border-radius: var(--base-navigation-borderRadius);
+    border: 1px solid rgba(35, 35, 35, 0.3);
+    cursor: pointer;
+    font-size: 12px;
+}
+.tab-nav li:active, .tab-nav li:hover, .tab-nav li.active {
+    background: black;
+    color: white;
+}
+.post-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    border: 1px solid #e8eaec;
+    border-radius: var(--base-section-border-radius);
+    background-color: #f9fbfc;
+    padding: 1rem;
+
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h2 {
+    margin-bottom: .7rem;
+    font-size: 1.5rem
+}
+
+.card-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.card-content i {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem; /*fuer icons nutzt man font size um die größe zu desfinieren*/
+    color: white;
+    background-color: black;
+    padding: .2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+
+}
+
+
+
+.card-image img {
+    aspect-ratio: 1/1;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 
