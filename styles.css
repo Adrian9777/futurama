@@ -11,8 +11,8 @@
     --base-font-size: 16px;
     --base-font-line-heigt: 1.2em;
     --base-font-weight: 500;
-
-
+    --base-navigation-borderRadius: 10px;
+    --base-section-border-radius: 32px
 }
 
 body{
@@ -26,6 +26,8 @@ body{
 
 h1, h2, h3 {
     font-weight: 700;
+    margin-bottom: 2rem;
+line-height: 3rem;
 }
 
 h1 {
@@ -39,34 +41,101 @@ h3 {
     font-size: 1.5rem;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 25px;
+}
+section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.active{
+    background: white;
+
+}
+
+.chatbot{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background: #f5f5f5;
+    min-width: 200px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 25px;
+    cursor:  pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+.chatbot p {
+    margin: 0;
+}
+
+.chatbot i {
+    background: white;
+    padding: 9px;
+    border-radius: 50%;
+}
+
 .top-bar {
     display: flex;              /* ordnet alle Kinder nebeneinander an */
     align-items: center;        /* vertikal zentrieren */
     justify-content: space-between; /* verteilt Platz gleichmäßig */
-    padding: 10px 20px;
+    padding: 3rem;
     background-color: #fff;     /* optional: Hintergrundfarbe */
     color: black;
     margin-left: 60px;
-    margin-right: 60px
+    margin-right: 60px;
+    margin: 0 auto;
 }
+.top-bar h1, .top-bar p {
+    margin: 0;
+}
+
+.user-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    justify-content: flex-end;
+}
+
 
 .navigation {
     background-color: #f5f5f5;
-    border-radius: 15px;
+    border-radius: var(--base-navigation-borderRadius);
 }
+
 
 .navigation ul{
     display: flex;
     list-style: none;
     gap: 20px;
-    padding: 15px;
+    padding: .5rem;
 
+}
+
+.navigation ul li {
+    padding: .8rem .5rem;
+    border-radius: var(--base-navigation-borderRadius);
 }
 
 .navigation ul li a{
     color: black;
     text-decoration: none;
 }
+
 
 .profile {
     display: flex;
@@ -76,14 +145,14 @@ h3 {
 }
 
 .profile img {
-    width: 70px;
+    width: 45px;
     border-radius: 50%;
 
 }
 
 .icon-nav{
     display: flex;
-    gap: 25px
+gap: 5px;
 }
 
 .icon-nav i{
@@ -92,4 +161,50 @@ h3 {
     border-radius: 50%;
 
 }
+
+.section-hero {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 1rem;
+    border-radius: var(--base-section-border-radius);
+    margin: 0 auto;
+    min-height: 60vh;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /*https://www.w3schools.com/css/css_background_shorthand.asp*/
+    background: linear-gradient(to bottom, rgba(255,255, 255, .3),rgba(122,197,205, .4)),
+    url("img/heroImage.webp")no-repeat center center/cover;
+
+}
+
+.section-hero h1, .section-hero p {
+    color: white;
+}
+
+.tags {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 20px;
+    right: 20px;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #709fba;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+
 
